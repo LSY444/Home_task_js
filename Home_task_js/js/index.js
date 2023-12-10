@@ -55,16 +55,44 @@ ggg();
 
 console.log('Task_5');
 
-function parOne(); {
-   return 3;
+function ggg() {
+
+   let parOne = function () {
+      return 3;
+   };
+   let parTwo = function () {
+      return 4;
+   };
+   let parSum = parOne + parTwo;
+   return parSum;
 }
-function parTwo(); { 
-   return 4;
+ggg();
+
+console.log('Task_6');
+
+let arrOne = [];
+let arrTwo = [];
+const arrS = (arrOne, arrTwo) => {
+   if (
+   arrOne.length === arrTwo.length &&
+   arrOne.every((element, index) => element === arrTwo[index])
+   ) {
+   return true;
+}
+   return false;
 }
 
-function ggg (parOne,parTwo) { 
-   let parSumm = parOne + parTwo;
-   return parSumm;
+console.log('Task_7');
+
+function chunkArr(myArr, chunk_size){
+   var index = 0;
+   var arrayLength = myArr.length;
+   var tempArr = [];
+   for (index = 0; index < arrayLength; index += chunk_size) {
+      myChunk = myArr.slice(index, index+chunk_size);
+      tempArr.push(myChunk);
+   }
+   return tempArr;
 }
-
-
+var result = chunkArr([1,2,3,4,5,6,7], 2);
+console.log(result);
